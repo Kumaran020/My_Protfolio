@@ -9,6 +9,7 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="ambient-background" aria-hidden="true"><span></span><span></span><span></span></div>
 
   <header class="header">
     <nav class="navbar container" aria-label="Main navigation">
@@ -35,7 +36,7 @@
       <div class="hero-content">
         <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
         <h1>Hi, I'm <span>Sudalai Balakumaran P.</span></h1>
-        <h2>BSc Computer Science Student</h2>
+        <h2 class="typing-heading"><span id="typing-text">BSc Computer Science Student</span><span class="typing-caret" aria-hidden="true"></span></h2>
         <p class="hero-description">
           I'm learning programming and web development, building
           practical projects, and improving my problem-solving skills
@@ -75,6 +76,25 @@
           applications using HTML, CSS, JavaScript, and other
           programming languages.
         </p>
+      </div>
+
+      <div class="bio-quiz" id="bio-quiz">
+        <div class="bio-quiz-heading">
+          <span class="quiz-kicker">A LITTLE INTERACTIVE FUN</span>
+          <h3>How well do you know me?</h3>
+          <p>Take this quick quiz to learn a little more about me.</p>
+        </div>
+        <div class="quiz-progress" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span id="quiz-progress-fill"></span></div>
+        <p class="quiz-count" id="quiz-count">Question 1 of 4</p>
+        <div class="quiz-question-area" aria-live="polite">
+          <h4 id="quiz-question">Which programming language is my favourite?</h4>
+          <div class="quiz-options" id="quiz-options"></div>
+          <p class="quiz-feedback" id="quiz-feedback" role="status"></p>
+        </div>
+        <div class="quiz-footer">
+          <span class="quiz-score" id="quiz-score">Score: 0 / 4</span>
+          <button class="button secondary quiz-next" id="quiz-next" type="button" disabled>Next question →</button>
+        </div>
       </div>
     </section>
 
